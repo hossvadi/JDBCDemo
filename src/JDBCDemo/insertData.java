@@ -21,7 +21,14 @@ public class insertData {
 
             myStmt.executeUpdate(sql);
 
-            System.out.println("Insert complete.");
+            System.out.println("Insert complete.\n");
+
+            ResultSet myRs = myStmt.executeQuery("select * from employees");
+            
+            // 4. Proccess the result set
+            while (myRs.next()) {
+            	System.out.println(myRs.getString("lastname") + ", " + myRs.getString("firstname"));
+            }
         }
         catch (Exception exc) {
             exc.printStackTrace();
