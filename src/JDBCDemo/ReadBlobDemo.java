@@ -29,7 +29,7 @@ public class ReadBlobDemo {
 			myRs = myStmt.executeQuery(sql);
 			
 			// 3. Set parameter for resume file name
-			File theFile = new File("resume_DB.pdf");
+			File theFile = new File("BLOB_resume_DB.pdf");
 			output = new FileOutputStream(theFile);
 			
 			if (myRs.next()) {
