@@ -22,8 +22,7 @@ public class IncreaseSalariesForDepartment {
 			showSalaries(myConn, theDepartment);
 
 			// Prepare the stored procedure call
-			myStmt = myConn
-					.prepareCall("{call increase_salaries_for_department(?, ?)}");
+			myStmt = myConn.prepareCall("{call increase_salaries_for_department(?, ?)}");
 
 			// Set the parameters
 			myStmt.setString(1, theDepartment);
